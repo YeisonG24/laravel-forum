@@ -27,7 +27,7 @@
 
     @if (auth()->check())
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-8 my-4">
                 <form  method="POST" action="{{ $thread->path() . '/replies' }}">
                     @csrf
                     <div class="form-group">
@@ -38,7 +38,7 @@
             </div>
         </div>
     @else
-        <p class="text-center">Please <a href="{{ route('login') }}">sign in</a> to participate in this discussion.</p>
+        <p class="text-center my-3">Please <a href="{{ route('login') }}">sign in</a> to participate in this discussion.</p>
     @endif
 </div>
 @endsection
